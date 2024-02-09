@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import logo8 from '../../src/assets/logo8.png';
 import icp1 from '../../src/assets/icp1.png';
-import './Home.css'; // Import your CSS file where you will define responsive styles
+import './Home.css'; 
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,12 +48,14 @@ const Home = () => {
                 providing them with the resources, mentorship, and collaboration opportunities they need to succeed. We believe in fostering a vibrant entrepreneurial ecosystem and helping startups turn their ideas into reality.
               </p>
               <div className="flex justify-start space-x-4 mt-12 ">
-                <button className="bg-white text-black py-2 px-6 rounded-full transition duration-300 hover:bg-gradient-to-r hover:from-pink-600 hover:to-purple-700 hover:text-white hover:font-bold">Learn more</button>
-                <button className="bg-white text-black py-2 px-10 border border-white rounded-full transition duration-300 hover:bg-gradient-to-r hover:from-pink-600 hover:to-purple-700 hover:text-white hover:font-bold">Sign In</button>
+                <button className="bg-white text-black py-2 md:px-6 px-3 rounded-full transition duration-300 hover:bg-gradient-to-r hover:from-pink-600 hover:to-purple-700 hover:text-white hover:font-bold">Learn more</button>
+                <button className="bg-white text-black py-2 md:px-6 px-3 border border-white rounded-full transition duration-300 hover:bg-gradient-to-r hover:from-pink-600 hover:to-purple-700 hover:text-white hover:font-bold">Sign In</button>
               </div>
             </section>
           </div>
-          <img src={icp1} alt="Image" className="w-full md:w-5/12 mt-8 md:mt-0 hidden-sm" style={{maxWidth: "400px"}} />
+          <img src={icp1} alt="Description of the image" className="w-full md:w-5/12 mt-8 md:mt-0 hidden-sm" style={{maxWidth: "400px"}} />
+
+
         </div>
 
         <div className="flex justify-center items-center mt-6">

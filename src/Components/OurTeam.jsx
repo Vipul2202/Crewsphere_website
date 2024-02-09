@@ -30,9 +30,7 @@ const OurTeam = () => {
             </div>
 
             {/* icp5 image */}
-            <img
-                src={icp5}
-                alt="icp5"
+            <img src={icp5} alt="icp5"
                 className="absolute z-10 w-30 h-[700px] mt-10 right-[-81px] top-[-5rem] md:mt-0 hidden-sm "
             />
           <div>

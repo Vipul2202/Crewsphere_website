@@ -232,30 +232,8 @@ const Faqs = () => {
                   <label htmlFor="option4" className="ml-2 text-sm text-white">Option 4</label>
                 </div>
               </div>
-              <div className="mt-2 flex flex-col md:flex-row">
-                <div className="mr-8">
-                  <input
-                    type="radio"
-                    id="option5"
-                    name="option"
-                    value="option5"
-                    onChange={handleChange}
-                    className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
-                  />
-                  <label htmlFor="option5" className="ml-2 text-sm text-white">Option 5</label>
-                </div>
-                <div>
-                  <input
-                    type="radio"
-                    id="option6"
-                    name="option"
-                    value="option6"
-                    onChange={handleChange}
-                    className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
-                  />
-                  <label htmlFor="option6" className="ml-2 text-sm text-white">Option 6</label>
-                </div>
-              </div>
+             
+           
             </div>
             <div className="mt-4">
               <label htmlFor="message" className="block text-sm font-medium text-white">Message</label>
