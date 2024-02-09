@@ -3,9 +3,6 @@ import React, { useState } from "react";
 import icp7 from '../../src/assets/icp7.png';
 import { FaEnvelope, FaPhone, FaMapMarker } from 'react-icons/fa';
 
-
-
-
 const Faqs = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -16,19 +13,59 @@ const Faqs = () => {
     message: '',
     option: '',
   });
+
+  const [validationErrors, setValidationErrors] = useState({});
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
+
+    // Validate the field and set validation error if necessary
+    if (value.trim() === '') {
+      setValidationErrors((prevErrors) => ({
+        ...prevErrors,
+        [name]: 'This field is required',
+      }));
+    } else {
+      setValidationErrors((prevErrors) => ({
+        ...prevErrors,
+        [name]: '', // Clear validation error when field is not empty
+      }));
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
-    // Add your form submission logic here
+
+    // Check if there are any validation errors before submitting the form
+    const hasErrors = Object.values(validationErrors).some(error => error !== '');
+    if (hasErrors) {
+      return; // Don't submit if there are validation errors
+    }
+
+    // Check if all fields are filled out
+    const isFormFilled = Object.values(formData).every(value => value.trim() !== '');
+    if (isFormFilled) {
+      console.log(formData);
+      // Reset the form data
+      setFormData({
+        name: '',
+        company: '',
+        email: '',
+        phone: '',
+        topic: '',
+        message: '',
+        option: '',
+      });
+    } else {
+      // This case should not occur due to inline validation
+      console.error('Form submission prevented because of validation errors.');
+    }
   };
+
   return (
     <div className=" min-h-screen px-[10%] py-[4%] flex flex-col justify-between" style={{ backgroundColor: '#100025' }}>
       <div className="flex flex-col md:flex-row justify-center items-center py-4 md:py-0 md:py-4 mt-32">
@@ -72,31 +109,38 @@ const Faqs = () => {
       </div>
       <div className="w-full justify-between flex-row bg-blue-900 mt-32 h-[450px] bg-cover bg-center rounded-xl flex ">
   {/* Content */}
-  <div className=" justify-start text-2xl font-bold  flex flex-row mt-8 h-[300px] w-[400px] md:w-auto">
-    <div className="flex flex-col justify-between pl-8">
-    <div className=" mt-4">
-      <FaEnvelope className="text-white mr-2" />
-      <span className="text-white">example@example.com</span>
-    </div>
-    <div className=" mt-8 ">
-      <FaPhone className="text-white mr-2" />
-      <span className="text-white ">123-456-7890</span>
-    </div>
-    <div className=" mt-8">
-      <FaMapMarker className="text-white mr-2" />
-      <span className="text-white">123 Street, City, Country</span>
-    </div>
-    </div>
-    
+  <div className="flex justify-start mt-8 h-[300px] w-[400px] md:w-auto">
+  <div className="flex flex-col justify-between pl-8">
+  <div className="flex items-center mb-2"> {/* Reduce the margin bottom here */}
+  <FaEnvelope className="text-white mr-2" />
+  <div className="flex flex-col">
+  
+  
+    <p className="text-white">@example.com</p>
   </div>
+</div>
+
+
+    <div className="flex items-center mb-2"> {/* Reduce the margin bottom here */}
+      <FaPhone className="text-white mr-2" />
+      <span className="text-white font-bold ">123-456-7890</span>
+    </div>
+    <div className="flex items-center mb-2"> {/* Reduce the margin bottom here */}
+      <FaMapMarker className="text-white mr-2" />
+      <span className="text-white font-bold">123 Street, City, Country</span>
+    </div>
+  </div>
+</div>
+
+
 
   {/* Image */}
   <div className="">
   <img
-    src={icp7}
-    alt="icp5"
-    className="absolute z-10 w-30 h-[450px] mt-10 right-[85px] top[400rem] hidden md:block"
-  />
+  src={icp7}
+  alt="icp5"
+  className="absolute z-10 w-30 h-[450px] mt-10 right-[85px] top[400rem] hidden md:block"
+/>
   </div>
 
 </div>
@@ -126,19 +170,24 @@ const Faqs = () => {
                   onChange={handleChange}
                   className="mt-1 p-2 w-full md:w-auto border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
                 />
+                {/* Display validation error message if any */}
+                {validationErrors.name && <p className="text-red-500 text-xs">{validationErrors.name}</p>}
               </div>
+
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-white ">
                   Your Company
                 </label>
                 <input
                   type="text"
-                  id="company"
-                  name="company"
-                  value={formData.company}
+                  id="name"
+                  name="name"
+                  value={formData.name}
                   onChange={handleChange}
                   className="mt-1 p-2 w-full md:w-auto border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
                 />
+                {/* Display validation error message if any */}
+                {validationErrors.name && <p className="text-red-500 text-xs">{validationErrors.name}</p>}
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
@@ -154,6 +203,7 @@ const Faqs = () => {
                   onChange={handleChange}
                   className="mt-1 p-2 w-full md:w-auto border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
                 />
+                 {validationErrors.email_address && <p className="text-red-500 text-xs">{validationErrors.email_address}</p>}
               </div>
               <div>
                 <label htmlFor="phone" className="block text-sm font-medium text-white ">
@@ -167,6 +217,7 @@ const Faqs = () => {
                   onChange={handleChange}
                   className="mt-1 p-2 w-full md:w-auto border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
                 />
+                 {validationErrors.name && <p className="text-red-500 text-xs">{validationErrors.name}</p>}
               </div>
             </div>
             <div className="mt-4">
@@ -181,6 +232,7 @@ const Faqs = () => {
                 onChange={handleChange}
                 className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
               />
+               {validationErrors.name && <p className="text-red-500 text-xs">{validationErrors.name}</p>}
             </div>
             <div className="mt-4">
               <label className="block text-sm font-medium text-white">Which Best describes You ?</label>
@@ -257,8 +309,11 @@ const Faqs = () => {
               <label htmlFor="acceptConditions" className="ml-2 text-sm text-white">I accept all conditions</label>
             </div>
             <div className="flex justify-center mt-8">
-              <button className="text-white py-2 px-10 text-xl rounded-full transition duration-300 bg-gradient-to-r from-pink-600 to-purple-700 font-bold">Submit</button>
+              <button className="text-white py-2 px-10 text-xl rounded-full transition duration-300 bg-gradient-to-r from-pink-600 to-purple-700 font-bold">
+                Submit
+              </button>
             </div>
+
           </form>
 
         </div>

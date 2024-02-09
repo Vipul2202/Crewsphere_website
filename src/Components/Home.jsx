@@ -48,8 +48,8 @@ const Home = () => {
                 providing them with the resources, mentorship, and collaboration opportunities they need to succeed. We believe in fostering a vibrant entrepreneurial ecosystem and helping startups turn their ideas into reality.
               </p>
               <div className="flex justify-start space-x-4 mt-12 ">
-                <button className="bg-white text-black md:py-2 py-0 md:px-6 px-3 rounded-full transition duration-300 hover:bg-gradient-to-r hover:from-pink-600 hover:to-purple-700 hover:text-white hover:font-bold">Learn more</button>
-                <button className="bg-white text-black py-2 md:px-6 px-3 border border-white rounded-full transition duration-300 hover:bg-gradient-to-r hover:from-pink-600 hover:to-purple-700 hover:text-white hover:font-bold">Sign In</button>
+                <button className="bg-white font-bold text-black md:py-2 py-0 md:px-6 px-3 rounded-full transition duration-300 hover:bg-gradient-to-r hover:from-pink-600 hover:to-purple-700 hover:text-white hover:font-bold">Learn more</button>
+                <button className="bg-white font-bold text-black py-2 md:px-6 px-3 border border-white rounded-full transition duration-300 hover:bg-gradient-to-r hover:from-pink-600 hover:to-purple-700 hover:text-white hover:font-bold">Sign In</button>
               </div>
             </section>
           </div>
