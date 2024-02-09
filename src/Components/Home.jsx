@@ -34,7 +34,7 @@ const Home = () => {
       <div></div>
 
       <div className=" content  min-h-screen px-[10%] py-[4%] flex flex-col justify-between" style={{ backgroundColor: '#100025' }}>
-        <div className="flex flex-col md:flex-row justify-center items-center py-4 md:py-0 md:py-4">
+        <div className="flex flex-col md:flex-row justify-center items-center py-4  md:py-4">
           <div className="w-full md:w-7/12 px-4">
             <h2 className="text-white font-bold">ABOUT US</h2>
             <header className="text-white text-3xl font-bold py-4">

@@ -26,10 +26,17 @@ const Cards = () => {
   ];
 
   return (
-    <div className= "bg-blue-900 md:h-screen h-full flex flex-col justify-center items-center md:mt-0 mt-8 flex-wrap">
+    <div className= "bg-blue-900 md:h-screen h-full flex flex-col justify-center items-center  flex-wrap ">
+       <div className="flex justify-center items-center ">
+        <div className="text-center">
+          <p className="text-gray-300 text-lg flex justify-start">TESTIMONIALS</p>
+          <h2 className="text-white text-3xl font-bold ">Voices Of Satisfaction</h2>
+          <p className='text-white text-md '>Unveiling the Power of Positive Experiences</p>
+        </div>
+      </div>
       <div className="flex flex-wrap justify-center w-full md:gap-32">
         {cards.map((card, index) => (
-          <div className={`w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 transition duration-300 relative ${index === 1 ? 'mb-10' : 'mt-7'}`} key={index}>
+          <div className={`w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 sm:mb-4 transition duration-300 relative ${index === 0 ? 'mb-24 md:mt-28 lg:mb-16' : index === 1 ? 'md:mt-12 lg:mb-28 lg:mt-2' : index === 2 ? 'mt-10 md:mt-36 lg:mb-16 ' : ''}`} key={index}>
             <div className="border border-white rounded-lg overflow-hidden w-full h-full relative">
               <div className="relative bg-gradient-to-b from-purple-600 to-indigo-600 text-white p-8 h-full  gap-">
                 <p className="text-sm mb-4">{card.description}</p>
@@ -48,6 +55,13 @@ const Cards = () => {
               <p className="text-white text-center">{card.name}</p>
               <p className="text-xs text-white text-center">{card.paragraph}</p>
             </div>
+            <div>
+               
+            </div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
         ))}
       </div>

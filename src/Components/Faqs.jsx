@@ -30,7 +30,7 @@ const Faqs = () => {
     // Add your form submission logic here
   };
   return (
-    <div className="bg-gradient-to-b from-pink-600 via-indigo-800 to-gray-300 min-h-screen px-[10%] py-[4%] flex flex-col justify-between">
+    <div className=" min-h-screen px-[10%] py-[4%] flex flex-col justify-between" style={{ backgroundColor: '#100025' }}>
       <div className="flex flex-col md:flex-row justify-center items-center py-4 md:py-0 md:py-4 mt-32">
         <div className="w-full md:w-7/12 px-4">
           <h2 className="text-white font-bold">YOUR QUERY</h2>
@@ -111,11 +111,11 @@ const Faqs = () => {
           </p>
           <form
             onSubmit={handleSubmit}
-            className=" md:w-[695px] p-6 shadow-md rounded-lg "
+            className=" md:w-[700px] p-6 shadow-md rounded-lg "
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                <label htmlFor="name" className="block text-sm font-medium text-white ">
                   Your Name
                 </label>
                 <input
@@ -128,7 +128,7 @@ const Faqs = () => {
                 />
               </div>
               <div>
-                <label htmlFor="company" className="block text-sm font-medium text-gray-700">
+                <label htmlFor="company" className="block text-sm font-medium text-white ">
                   Your Company
                 </label>
                 <input
@@ -143,7 +143,7 @@ const Faqs = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                <label htmlFor="email" className="block text-sm font-medium text-white ">
                   Email Address
                 </label>
                 <input
@@ -156,7 +156,7 @@ const Faqs = () => {
                 />
               </div>
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+                <label htmlFor="phone" className="block text-sm font-medium text-white ">
                   Phone Number
                 </label>
                 <input
@@ -170,7 +170,7 @@ const Faqs = () => {
               </div>
             </div>
             <div className="mt-4">
-              <label htmlFor="topic" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="topic" className="block text-sm font-medium text-white ">
                 Choose a Topic
               </label>
               <input
