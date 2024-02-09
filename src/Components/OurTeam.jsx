@@ -5,7 +5,7 @@ import './OurTeam.css';
 
 const OurTeam = () => {
     return (
-        <div className="relative flex px-[12%] py-[10%] bg-blue-900 h-full w-full">
+        <div className="relative flex px-[12%] py-[10%]  h-screen w-full" style={{ backgroundColor: '#100025' }}>
             {/* Transparent box */}
 
 
