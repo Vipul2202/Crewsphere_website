@@ -2,6 +2,7 @@ import React from 'react';
 import SamarthJain from '../../src/assets/Samarth Jain.png';
 import SiviaGoyal from '../../src/assets/Sivia Goyal.png';
 import UjjwalSinghla from '../../src/assets/Ujjwal Singhla.png';
+import './Cards.css';
 
 const Cards = () => {
   const cards = [
@@ -29,8 +30,11 @@ const Cards = () => {
     <div className= "bg-blue-900 md:h-screen h-full flex flex-col justify-center items-center  flex-wrap ">
        <div className="flex justify-center items-center ">
         <div className="text-center">
-          <p className="text-gray-300 text-lg flex justify-start">TESTIMONIALS</p>
-          <h2 className="text-white text-3xl font-bold ">Voices Of Satisfaction</h2>
+          <p className="text-gray-300 text-lg flex justify-start">TESTIMONIALS </p>
+          <h1 className='text-white font-bold flex justify-start text-4xl'>VOICE OF
+          <span className='text-gradient'>
+            <span className="pl-2"> SATISFACTION</span>
+            </span></h1>
           <p className='text-white text-md '>Unveiling the Power of Positive Experiences</p>
         </div>
       </div>

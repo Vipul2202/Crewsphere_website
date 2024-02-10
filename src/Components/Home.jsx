@@ -5,10 +5,16 @@ import './Home.css';
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [logoMoved, setLogoMoved] = useState(false);
+
+  const handleMenuClick = () => {
+    setIsOpen(!isOpen);
+    setLogoMoved(!logoMoved); 
+  };
 
   return (
     <div>
-      <div className="navbar bg-custom-color  text-white p-4 flex justify-between items-center">
+      <div className={`navbar bg-custom-color text-white p-4 flex justify-between items-center ${logoMoved ? 'logo-moved' : ''}`}>
         <div className="mx-8">
           <img src={logo8} alt="Logo" className="h-12 md:h-16 lg:h-20" />
         </div>
@@ -17,9 +23,9 @@ const Home = () => {
           <a href="#team" className="hover:text-gray-300">OUR TEAM</a>
           <a href="#gallery" className="hover:text-gray-300">GALLERY</a>
           <a href="#testimonials" className="hover:text-gray-300">TESTIMONIALS</a>
-          <a href="#faqs" className="hover:text-gray-300">FAQS</a>
+          <a href="#faqs" className="hover:text-gray-300">FAQS</a> 
         </div>
-        <button className="lg:hidden px-4 py-2 bg-pink-500 hover:bg-pink-600 rounded-md" onClick={() => setIsOpen(!isOpen)}>Menu</button>
+        <button className="lg:hidden px-4 py-2 bg-pink-500 hover:bg-pink-600 rounded-md" onClick={handleMenuClick}>Menu</button>
         <div className={`lg:hidden ${isOpen ? 'block' : 'hidden'}`}>
           <a href="#about" className="block py-2 px-4 text-white hover:text-gray-300">ABOUT</a>
           <a href="#team" className="block py-2 px-4 text-white hover:text-gray-300">OUR TEAM</a>
@@ -38,9 +44,13 @@ const Home = () => {
           <div className="w-full md:w-7/12 px-4">
             <h2 className="text-white font-bold">ABOUT US</h2>
             <header className="text-white text-3xl font-bold py-4">
-              <h1>EMPOWERING STARTUPS </h1>
-              <h1>TO ACHIEVE THEIR </h1>
-              <h1 className='text-gradient-to-br from-purple-700 via-purple-600 to-indigo-700'>VISION</h1>
+              <h1 className='mb-3'>EMPOWERING STARTUPS </h1>
+              <h1 className='mb-3'>TO ACHIEVE THEIR </h1>
+              <h1 className='text-gradient-to-br from-purple-700 via-purple-600 to-indigo-700'>
+                <span className='text-gradient'>
+                  <span className='pl-2'>
+                VISION</span>
+                </span></h1>
             </header>
             <section id="about" className="mb-8">
               <p className="text-md text-white">
@@ -54,14 +64,15 @@ const Home = () => {
             </section>
           </div>
           <img src={icp1} alt="Description of the image" className="w-full md:w-5/12 mt-8 md:mt-0 hidden-sm" style={{maxWidth: "400px"}} />
-
-
         </div>
 
         <div className="flex justify-center items-center mt-6">
           <div >
             <p className="text-gray-300 text-lg">INNOVATE</p>
-            <h2 className="text-white text-3xl font-bold  py-4 ">MEET OUR CO-FOUNDERS</h2>
+            <h2 className="text-white text-3xl font-bold  py-4 ">MEET OUR 
+            <span className='text-gradient'>
+            <span className='pl-2'>CO-FOUNDERS </span>
+            </span></h2>
             <p className='text-white text-md flex justify-center mb-4 '>Get to know the talented individuals behind our incubator</p>
             {/* Co-founders Content */}
           </div>

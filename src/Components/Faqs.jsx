@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import icp7 from '../../src/assets/icp7.png';
 import { FaEnvelope, FaPhone, FaMapMarker } from 'react-icons/fa';
+import './Faqs.css'; 
 
 const Faqs = () => {
   const [formData, setFormData] = useState({
@@ -103,15 +104,19 @@ const Faqs = () => {
       <div className="flex justify-center items-center">
         <div>
           <p className="text-gray-300 text-lg">CONTACT</p>
-          <h2 className="text-white text-3xl font-bold py-4 ">Get In <span className='text-red-900'>Touch</span></h2>
-          <p className='text-white text-md flex justify-center mb-4 '>Have any options or want to apply? Reach out to us</p>
+          <h2 className="text-white text-3xl font-bold  ">GET IN
+          <span className='text-gradient'>
+  <span className='pl-2'>TOUCH</span>
+</span>
+</h2>
+          <p className='text-white text-md flex justify-center '>Have any options or want to apply? Reach out to us</p>
         </div>
       </div>
       <div className="w-full justify-between flex-row bg-blue-900 mt-32 h-[450px] bg-cover bg-center rounded-xl flex ">
   {/* Content */}
   <div className="flex justify-start mt-8 h-[300px] w-[400px] md:w-auto">
   <div className="flex flex-col justify-between pl-8">
-  <div className="flex items-center mb-2"> {/* Reduce the margin bottom here */}
+  <div className="flex items-center mb-2"> 
   <FaEnvelope className="text-white mr-2" />
   <div className="flex flex-col">
   
@@ -121,11 +126,11 @@ const Faqs = () => {
 </div>
 
 
-    <div className="flex items-center mb-2"> {/* Reduce the margin bottom here */}
+    <div className="flex items-center mb-2">
       <FaPhone className="text-white mr-2" />
       <span className="text-white font-bold ">123-456-7890</span>
     </div>
-    <div className="flex items-center mb-2"> {/* Reduce the margin bottom here */}
+    <div className="flex items-center mb-2"> 
       <FaMapMarker className="text-white mr-2" />
       <span className="text-white font-bold">123 Street, City, Country</span>
     </div>
@@ -147,10 +152,13 @@ const Faqs = () => {
 
       <div className="flex justify-center items-center mt-20">
         <div className="w-full md:w-3/4 lg:w-2/3 xl:w-1/2">
-          <h2 className="text-white text-3xl font-bold py-4 mt-8 text-center">
-            CONNECT <span className="text-red-900">With Us</span>
+          <h2 className="text-white text-4xl font-bold py-4 mt-8 text-center">
+            CONNECT<span className='text-gradient'>
+  <span className='text-red-900 pl-2'>WITH US</span>
+</span>
+
           </h2>
-          <p className="text-white text-md text-center mb-4">
+          <p className="text-white text-smtext-center mb-4  flex justify-center">
             Have an option or need more information? Contact Us
           </p>
           <form
