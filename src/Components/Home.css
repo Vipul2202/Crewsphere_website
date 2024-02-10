@@ -17,5 +17,19 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+  .nav-link {
+    position: relative;
+  }
+  
+  .nav-link:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; 
+    width: 100%;
+    border-bottom: 2px solid;
+  }
+  
+  
   
   

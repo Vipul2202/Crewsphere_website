@@ -28,7 +28,7 @@ const Cards = () => {
 
   return (
     <div className= "bg-blue-900 md:h-screen h-full flex flex-col justify-center items-center  flex-wrap  gradient-background">
-       <div className="flex justify-center items-center ">
+       <div className="flex justify-center items-center flex-col">
         <div className="text-center">
           <p className="text-gray-300 text-lg flex justify-start">TESTIMONIALS </p>
           <h1 className='text-white font-bold flex justify-start text-4xl'>VOICE OF
@@ -37,10 +37,10 @@ const Cards = () => {
             </span></h1>
           <p className='text-white text-md '>Unveiling the Power of Positive Experiences</p>
         </div>
-      </div>
-      <div className="flex flex-wrap justify-center w-full md:gap-32">
+      
+      <div className="  flex flex-wrap flex-row justify-start w-full  ">
         {cards.map((card, index) => (
-          <div className={`w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 sm:mb-4 transition duration-300 relative ${index === 0 ? 'mb-24 md:mt-36 lg:mb-16' : index === 1 ? 'md:mt-12 mb-16 lg:mt-2 lg:mb-48 ' : index === 2 ? 'mt-10 md:mt-36 lg:mb-16 ' : ''}`} key={index}>
+          <div className={`w-full sm:w-1/2 md:w-1/3 lg:w-1/3 p-4 sm:mb-4 transition duration-300 relative ${index === 0 ? 'mb-24 md:mt-36 lg:mb-16' : index === 1 ? 'md:mt-12 mb-16 lg:mt-2 lg:mb-48 ' : index === 2 ? 'mt-10 md:mt-36 lg:mb-16 ' : ''}`} key={index}>
             <div className="border border-white rounded-lg overflow-hidden w-full h-full relative">
               <div className="relative bg-gradient-to-b from-purple-600 to-indigo-600 text-white p-8 h-full  gap-">
                 <p className="text-sm mb-4">{card.description}</p>
@@ -68,6 +68,7 @@ const Cards = () => {
             <div></div>
           </div>
         ))}
+      </div>
       </div>
     </div>
   );

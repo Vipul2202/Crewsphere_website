@@ -4,40 +4,43 @@ import icp1 from '../../src/assets/icp1.png';
 import './Home.css'; 
 
 const Home = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const [logoMoved, setLogoMoved] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleMenuClick = () => {
     setIsOpen(!isOpen);
-    setLogoMoved(!logoMoved); 
   };
 
   return (
     <div>
-      <div className={`navbar bg-custom-color text-white p-4 flex justify-between items-center ${logoMoved ? 'logo-moved' : ''}`}>
-        <div className="mx-8">
-          <img src={logo8} alt="Logo" className="h-12 md:h-16 lg:h-20" />
-        </div>
-        <div className="hidden lg:flex lg:space-x-4">
-          <a href="#about" className="hover:text-gray-300">ABOUT</a>
-          <a href="#team" className="hover:text-gray-300">OUR TEAM</a>
-          <a href="#gallery" className="hover:text-gray-300">GALLERY</a>
-          <a href="#testimonials" className="hover:text-gray-300">TESTIMONIALS</a>
-          <a href="#faqs" className="hover:text-gray-300">FAQS</a> 
-        </div>
-        <button className="lg:hidden px-4 py-2 bg-pink-500 hover:bg-pink-600 rounded-md" onClick={handleMenuClick}>Menu</button>
-        <div className={`lg:hidden ${isOpen ? 'block' : 'hidden'}`}>
-          <a href="#about" className="block py-2 px-4 text-white hover:text-gray-300">ABOUT</a>
-          <a href="#team" className="block py-2 px-4 text-white hover:text-gray-300">OUR TEAM</a>
-          <a href="#gallery" className="block py-2 px-4 text-white hover:text-gray-300">GALLERY</a>
-          <a href="#testimonials" className="block py-2 px-4 text-white hover:text-gray-300">TESTIMONIALS</a>
-          <a href="#faqs" className="block py-2 px-4 text-white hover:text-gray-300">FAQS</a>
-        </div>
-        <div className='pr-8 lg:pr-36'> 
-          <button className="hidden lg:block px-6 font-bold py-2 bg-gradient-to-r from-pink-600 to-purple-700 rounded-full">Apply Now</button>
-        </div>
+       <div className={`navbar bg-custom-color text-white p-4 flex justify-between items-center ${logoMoved ? 'logo-moved' : ''}`}>
+      <div className="mx-8">
+        <img src={logo8} alt="Logo" className="h-12 md:h-16 lg:h-20" />
       </div>
-      <div></div>
+      <div className="hidden lg:flex lg:space-x-4">
+        <a href="#about" className="nav-link">ABOUT</a>
+        <a href="#team" className="nav-link">OUR TEAM</a>
+        <a href="#gallery" className="nav-link">GALLERY</a>
+        <a href="#testimonials" className="nav-link">TESTIMONIALS</a>
+        <a href="#faqs" className="nav-link">FAQS</a> 
+      </div>
+      <button className="lg:hidden px-4 py-2 bg-pink-500 hover:bg-pink-600 rounded-md" onClick={handleMenuClick}>Menu</button>
+      <div className={`lg:hidden ${isOpen ? 'block' : 'hidden'}`}>
+        <a href="#about" className="block py-2 px-4 text-white hover:text-gray-300">ABOUT</a>
+        <a href="/" className="block py-2 px-4 text-white hover:text-gray-300">OUR TEAM</a>
+        <a href="#gallery" className="block py-2 px-4 text-white hover:text-gray-300">GALLERY</a>
+        <a href="#testimonials" className="block py-2 px-4 text-white hover:text-gray-300">TESTIMONIALS</a>
+        <a href="#faqs" className="block py-2 px-4 text-white hover:text-gray-300">FAQS</a>
+      </div>
+      <div className='pr-8 lg:pr-36'> 
+        <button className="hidden lg:block px-6 font-bold py-2 bg-gradient-to-r from-pink-600 to-purple-700 rounded-full">Apply Now</button>
+      </div>
+      </div>
+      <hr className='' style={{ backgroundColor: '#1a0037',border: 'none',height:'2px'
+ }} />
+      <div>
+
+      </div>
 
       <div className=" content  min-h-screen px-[10%] py-[4%] flex flex-col justify-between" style={{ backgroundColor: '#100025' }}>
         <div className="flex flex-col md:flex-row justify-center items-center py-4  md:py-4">

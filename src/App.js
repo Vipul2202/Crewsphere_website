@@ -17,7 +17,7 @@ function App() {
 <About />
 <OurTeam />
 <Gallery />
- <Cards />
+<Cards />
 <Faqs />
 <Footer />
 

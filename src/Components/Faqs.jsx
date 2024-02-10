@@ -92,7 +92,7 @@ const Faqs = () => {
   {[1, 2, 3, 4, 5].map((index) => (
     <div key={index} className="mb-4">
       <select className="border-0 rounded-md p-2 pr-14 focus:outline-none text-white font-bold bg-transparent">
-
+        
         <option value="">What is the program duration? {index}</option>
         <option value="">How do I apply?</option>
         <option value="">What support do you provide?</option>
@@ -102,6 +102,8 @@ const Faqs = () => {
     </div>
   ))}
 </div>
+
+
 
       </div>
 
