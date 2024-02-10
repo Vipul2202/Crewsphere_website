@@ -1,6 +1,6 @@
 import React from 'react';
-import D from '../../src/assets/D.jpg';
-import B from '../../src/assets/B.jpg';
+import e from '../../src/assets/e.png';
+import d from '../../src/assets/d.png';
 
 const About = () => {
   
@@ -14,7 +14,7 @@ const About = () => {
             <div className="rounded-lg shadow-sm">
               <img
                 className="w-[250px]  mx-auto"
-                src={B}
+                src={d}
                 alt="Bandhu Bansal"
               />
              
@@ -31,7 +31,7 @@ const About = () => {
             <div className="rounded-lg shadow-sm">
               <img
                 className="w-[250px] mx-auto"
-                src={D}
+                src={e}
                 alt="Deepak Goyal"
               />
               <div className="p-10 ">
