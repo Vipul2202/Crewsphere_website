@@ -5,7 +5,7 @@ const Gallery = () => {
   return (
     <div className='h-full ' style={{ backgroundColor: '#100025' }}>
       <div className="text-center">
-        <h3 className='text-white text-md font-bold  flex justify-between lg:pl-[40rem] md:pl-[21rem]   '>HIGHLIGHTS</h3>
+        <h3 className='text-white text-md font-bold  flex justify-center lg:pl-[40rem] md:pl-[21rem]  md:justify-start '>HIGHLIGHTS</h3>
         <h1 className="text-white text-4xl font-bold mt-2">OUR GALLERY &<span className='text-gradient'>
   <span className='pl-2'>SESSION</span>
 </span></h1>

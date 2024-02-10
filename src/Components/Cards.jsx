@@ -28,15 +28,15 @@ const Cards = () => {
 
   return (
     <div className= "bg-blue-900 md:h-screen h-full flex flex-col justify-center items-center  flex-wrap  gradient-background">
-       <div className="flex justify-center items-center flex-col">
-        <div className="text-center">
-          <p className="text-gray-300 text-lg flex justify-start">TESTIMONIALS </p>
-          <h1 className='text-white font-bold flex justify-start text-4xl'>VOICE OF
-          <span className='text-gradient'>
-            <span className="pl-2"> SATISFACTION</span>
-            </span></h1>
-          <p className='text-white text-md '>Unveiling the Power of Positive Experiences</p>
-        </div>
+    <div className="flex justify-center items-center flex-col">
+    <div className="text-center">
+      {/* "VOICE OF" and "SATISFACTION" split into separate lines for mobile view */}
+      <h1 className='text-white font-bold flex flex-col justify-center md:flex-row md:justify-start text-4xl'>
+        <span>VOICE OF</span>
+        <span className='text-gradient md:pl-2'>SATISFACTION</span>
+      </h1>
+      <p className='text-white text-md '>Unveiling the Power of Positive Experiences</p>
+    </div>
       
       <div className="  flex flex-wrap flex-row justify-start w-full  ">
         {cards.map((card, index) => (
