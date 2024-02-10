@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import icp7 from '../../src/assets/icp7.png';
 import { FaEnvelope, FaPhone, FaMapMarker } from 'react-icons/fa';
-import './Faqs.css'; 
+import './Faqs.css';
 
 const Faqs = () => {
   const [formData, setFormData] = useState({
@@ -74,7 +74,9 @@ const Faqs = () => {
           <h2 className="text-white font-bold">YOUR QUERY</h2>
           <header className="text-white text-3xl font-bold py-4">
             <h1>FREQUENTLY ASKED </h1>
-            <h1> <span className='text-red-900'>optionS </span></h1>
+            <span className='text-gradient'>
+            <span className=''>QUESTIONS </span>
+            </span>
           </header>
           <section id="about" className="mb-8">
             <p className="text-md text-white">
@@ -87,85 +89,98 @@ const Faqs = () => {
           </section>
         </div>
         <div>
-          {[1, 2, 3, 4, 5].map((index) => (
-            <div key={index} className="mb-4">
-              <select className="border rounded-md p-2 focus:outline-none text-black font-bold">
-                <option value="">What is the program duration? {index}</option>
-                <option value="">How do I apply?</option>
-                <option value="">What support do you provide?</option>
-                <option value="">Do you take equity?</option>
-                <option value="">Can I apply with a team?</option>
-              </select>
-            </div>
-          ))}
-        </div>
+  {[1, 2, 3, 4, 5].map((index) => (
+    <div key={index} className="mb-4">
+      <select className="border-0 rounded-md p-2 pr-14 focus:outline-none text-white font-bold bg-transparent">
+
+        <option value="">What is the program duration? {index}</option>
+        <option value="">How do I apply?</option>
+        <option value="">What support do you provide?</option>
+        <option value="">Do you take equity?</option>
+        <option value="">Can I apply with a team?</option>
+      </select>
+    </div>
+  ))}
+</div>
+
       </div>
 
       <div className="flex justify-center items-center">
         <div>
           <p className="text-gray-300 text-lg">CONTACT</p>
           <h2 className="text-white text-3xl font-bold  ">GET IN
-          <span className='text-gradient'>
-  <span className='pl-2'>TOUCH</span>
-</span>
-</h2>
+            <span className='text-gradient'>
+              <span className='pl-2'>TOUCH</span>
+            </span>
+          </h2>
           <p className='text-white text-md flex justify-center '>Have any options or want to apply? Reach out to us</p>
         </div>
       </div>
       <div className="w-full justify-between flex-row  mt-12 h-[450px] bg-cover bg-center rounded-xl flex gradient-background">
-    
-
-  {/* Content */}
-  <div className="flex justify-start mt-8 h-[300px] w-[400px] md:w-auto">
-  <div className="flex flex-col justify-between pl-8">
-  <div className="flex items-center mb-2"> 
-  <FaEnvelope className="text-white mr-2" />
-  <div className="flex flex-col">
-  
-  
-    <p className="text-white">@example.com</p>
-  </div>
-</div>
 
 
-    <div className="flex items-center mb-2">
-      <FaPhone className="text-white mr-2" />
-      <span className="text-white font-bold ">123-456-7890</span>
-    </div>
-    <div className="flex items-center mb-2"> 
-      <FaMapMarker className="text-white mr-2" />
-      <span className="text-white font-bold">123 Street, City, Country</span>
-    </div>
-  </div>
-</div>
+        {/* Content */}
+        <div className="flex justify-start mt-8 h-[300px] w-[400px] md:w-auto pl-8">
+          <div className="flex flex-col justify-between pl-8">
+            <div className="flex items-center mb-2">
+              <FaEnvelope className="text-white mr-2" />
+              <div className="flex flex-col">
+                <h1 className="text-white font-bold mt-[3rem]">E-Mail</h1>
+                <h2 className="text-white ">Send Your E-Mail id</h2>
+                <p className="text-white ">abcd@example.com</p>
+              </div>
+            </div>
+
+            <div></div>
+            <div className="flex items-center mb-2">
+              <FaPhone className="text-white mr-2" />
+
+              <div className="flex flex-col">
+                <h2 className="text-white font-bold mt-[3rem] ">Phone</h2>
+                <h1 className="text-white ">Give us a call</h1>
+                <h2 className="text-white underline ">+91-123456789</h2>
+              </div>
+            </div>
+            <div className="flex items-center mb-2">
+              <FaMapMarker className="text-white mr-2" />
+
+              <div className="flex flex-col">
+                <h2 className="text-white font-bold mt-[3rem]">office</h2>
+                <h1 className="text-white ">Give us a call</h1>
+                <h2 className="text-white underline ">+91-123456789</h2>
+              </div>
+            </div>
+          </div>
+        </div>
 
 
 
-  {/* Image */}
-  <div className="">
-  <img
-  src={icp7}
-  alt="icp5"
-  className="absolute z-10 w-30 h-[438px] mt-2 right-[80px] top[400rem] hidden md:block"
-/>
-  </div>
+        {/* Image */}
+        <div className="">
+          <img
+            src={icp7}
+            alt="icp5"
+            className="absolute z-10 w-30 h-[438px] mt-2 right-[80px] top[400rem] hidden md:block"
+          />
+        </div>
 
-</div>
+      </div>
 
       <div className="flex justify-center items-center mt-20">
         <div className="w-full md:w-3/4 lg:w-2/3 xl:w-1/2">
-          <h2 className="text-white text-4xl font-bold py-4 mt-8 text-center">
-            CONNECT<span className='text-gradient'>
-  <span className='text-red-900 pl-2'>WITH US</span>
-</span>
-
+          <h2 className="text-white text-4xl font-bold py-4 mt-8 text-center flex flex-wrap justify-center">
+            CONNECT
+            <span className='text-gradient flex items-center'>
+              <span className='text-red-900 pl-2'>WITH US</span>
+            </span>
           </h2>
-          <p className="text-white text-smtext-center mb-4  flex justify-center">
+
+          <p className="text-white text-sm text-center mb-4  flex justify-center">
             Have an option or need more information? Contact Us
           </p>
           <form
             onSubmit={handleSubmit}
-            className=" md:w-[700px] p-6 shadow-md rounded-lg "
+            className="w-full max-w-xl  shadow-md rounded-lg mx-auto"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
@@ -213,7 +228,7 @@ const Faqs = () => {
                   onChange={handleChange}
                   className="mt-1 p-2 w-full md:w-auto border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
                 />
-                 {validationErrors.email_address && <p className="text-red-500 text-xs">{validationErrors.email_address}</p>}
+                {validationErrors.email_address && <p className="text-red-500 text-xs">{validationErrors.email_address}</p>}
               </div>
               <div>
                 <label htmlFor="phone" className="block text-sm font-medium text-white ">
@@ -227,7 +242,7 @@ const Faqs = () => {
                   onChange={handleChange}
                   className="mt-1 p-2 w-full md:w-auto border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
                 />
-                 {validationErrors.name && <p className="text-red-500 text-xs">{validationErrors.name}</p>}
+                {validationErrors.name && <p className="text-red-500 text-xs">{validationErrors.name}</p>}
               </div>
             </div>
             <div className="mt-4">
@@ -242,7 +257,7 @@ const Faqs = () => {
                 onChange={handleChange}
                 className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
               />
-               {validationErrors.name && <p className="text-red-500 text-xs">{validationErrors.name}</p>}
+              {validationErrors.name && <p className="text-red-500 text-xs">{validationErrors.name}</p>}
             </div>
             <div className="mt-4">
               <label className="block text-sm font-medium text-white">Which Best describes You ?</label>
@@ -294,8 +309,8 @@ const Faqs = () => {
                   <label htmlFor="option4" className="ml-2 text-sm text-white">Option 4</label>
                 </div>
               </div>
-             
-           
+
+
             </div>
             <div className="mt-4">
               <label htmlFor="message" className="block text-sm font-medium text-white">Message</label>

@@ -1,0 +1,8 @@
+/* In your CSS file or within style tags in your HTML file */
+.gradient-background-1 {
+    background-image: linear-gradient(to bottom, #200147 0%, #5F18A5 100%);
+  }
+  .gradient-background-2 {
+    background-image: linear-gradient(to right, #23024B 0%, #A1329F 100%);
+  }
+  
