@@ -4,4 +4,10 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+  /* styles.css */
+/* styles.css */
+.gradient-background {
+    background-image: linear-gradient(to bottom, #200147 0%, #5F18A5 100%);
+  }
+  
   

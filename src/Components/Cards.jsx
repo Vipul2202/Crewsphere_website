@@ -27,7 +27,7 @@ const Cards = () => {
   ];
 
   return (
-    <div className= "bg-blue-900 md:h-screen h-full flex flex-col justify-center items-center  flex-wrap ">
+    <div className= "bg-blue-900 md:h-screen h-full flex flex-col justify-center items-center  flex-wrap  gradient-background">
        <div className="flex justify-center items-center ">
         <div className="text-center">
           <p className="text-gray-300 text-lg flex justify-start">TESTIMONIALS </p>

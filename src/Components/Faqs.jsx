@@ -112,7 +112,9 @@ const Faqs = () => {
           <p className='text-white text-md flex justify-center '>Have any options or want to apply? Reach out to us</p>
         </div>
       </div>
-      <div className="w-full justify-between flex-row bg-blue-900 mt-32 h-[450px] bg-cover bg-center rounded-xl flex ">
+      <div className="w-full justify-between flex-row  mt-12 h-[450px] bg-cover bg-center rounded-xl flex gradient-background">
+    
+
   {/* Content */}
   <div className="flex justify-start mt-8 h-[300px] w-[400px] md:w-auto">
   <div className="flex flex-col justify-between pl-8">
@@ -144,7 +146,7 @@ const Faqs = () => {
   <img
   src={icp7}
   alt="icp5"
-  className="absolute z-10 w-30 h-[450px] mt-10 right-[85px] top[400rem] hidden md:block"
+  className="absolute z-10 w-30 h-[438px] mt-2 right-[80px] top[400rem] hidden md:block"
 />
   </div>
 
