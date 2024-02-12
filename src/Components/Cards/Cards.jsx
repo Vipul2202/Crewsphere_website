@@ -1,7 +1,7 @@
 import React from 'react';
-import SamarthJain from '../../src/assets/Samarth Jain.png';
-import SiviaGoyal from '../../src/assets/Sivia Goyal.png';
-import UjjwalSinghla from '../../src/assets/Ujjwal Singhla.png';
+import SamarthJain from '../../assets/Samarth Jain.png';
+import SiviaGoyal from '../../assets/Sivia Goyal.png';
+import UjjwalSinghla from '../../assets/Ujjwal Singhla.png';
 import './Cards.css';
 
 const Cards = () => {
@@ -30,7 +30,7 @@ const Cards = () => {
     <div className= "bg-blue-900 md:h-screen h-full flex flex-col justify-center items-center  flex-wrap  gradient-background">
     <div className="flex justify-center items-center flex-col">
     <div className="text-center">
-      {/* "VOICE OF" and "SATISFACTION" split into separate lines for mobile view */}
+     
       <h1 className='text-white font-bold flex flex-col justify-center md:flex-row md:justify-start text-4xl'>
         <span>VOICE OF</span>
         <span className='text-gradient md:pl-2'>SATISFACTION</span>

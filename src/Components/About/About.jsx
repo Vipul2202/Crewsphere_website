@@ -1,15 +1,16 @@
 import React from 'react';
-import e from '../../src/assets/e.png';
-import d from '../../src/assets/d.png';
+import e from '../../assets/e.png';
+import d from '../../assets/d.png';
+import './About.css'
 
 const About = () => {
   
   return (
-    <div className=" p-8 h-full" style={{ backgroundColor: '#100025' }}>
+    <div className=" p-8 h-full gradient-background" >
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-wrap -mx-4 justify-center md:justify-start ">
           
-          {/* Card 1 */}
+      
           <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/2 p-4 lg:pl-4 ">
             <div className="rounded-lg shadow-sm">
               <img
@@ -26,7 +27,7 @@ const About = () => {
             </div>
           </div>
        
-          {/* Card 2 */}
+       
           <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/2 p-4 lg:pl-4">
             <div className="rounded-lg shadow-sm">
               <img

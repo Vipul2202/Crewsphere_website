@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import logo8 from '../../src/assets/logo8.png';
-import icp1 from '../../src/assets/icp1.png';
-import './Home.css'; 
+
+import icp1 from '../../assets/icp1.png';
+import logo8 from '../../assets/logo8.png';
+
+import '../Home/Home.css'; 
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,7 +38,8 @@ const Home = () => {
         </div>
       </div>
       <hr className='' style={{ backgroundColor: '#1a0037',border: 'none',height:'2px' }} />
-      <div className=" content  min-h-screen px-[10%] py-[4%] flex flex-col justify-between" style={{ backgroundColor: '#100025' }}>
+      <div className=" content  min-h-screen px-[10%] py-[4%] flex flex-col justify-between  gradient-background-4"
+      >
         <div className="flex flex-col md:flex-row justify-center items-center py-4  md:py-4">
           <div className="w-full md:w-7/12 px-4">
             <h2 className="text-white font-bold">ABOUT US</h2>
@@ -71,7 +74,7 @@ const Home = () => {
             <span className='pl-2'>CO-FOUNDERS </span>
             </span></h2>
             <p className='text-white text-md flex justify-center mb-4 '>Get to know the talented individuals behind our incubator</p>
-            {/* Co-founders Content */}
+     
           </div>
         </div>
       </div>

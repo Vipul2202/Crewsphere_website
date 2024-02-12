@@ -1,7 +1,7 @@
 import React from 'react';
-import logo8 from '../../src/assets/logo8.png';
+import logo8 from '../../assets/logo8.png';
 import { FaLink, FaMapMarker, FaPhone, FaEnvelope } from 'react-icons/fa';
-import OurTeam from './OurTeam';
+import OurTeam from '../Our_Team/OurTeam';
 
 
 const Footer = () => {
@@ -14,7 +14,7 @@ const Footer = () => {
                     <div class="md:flex md:justify-between">
                         <div class="mb-6 md:mb-0">
 
-                            <img src={logo8} class="h-[100px] w-32 me-3" alt="crewsphere" />
+                            <img src={logo8} class="h-[70px] w-32 me-3" alt="crewsphere" />
 
 
                         </div>

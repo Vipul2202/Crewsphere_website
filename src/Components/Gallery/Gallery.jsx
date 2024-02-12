@@ -1,5 +1,5 @@
 import React from 'react';
-import Group from '../../src/assets/Group.png';
+import Group from '../../assets/Group.png';
 
 const Gallery = () => {
   return (

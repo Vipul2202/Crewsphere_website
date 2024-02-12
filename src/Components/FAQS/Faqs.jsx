@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import icp7 from '../../src/assets/icp7.png';
+import icp7 from '../../assets/icp7.png';
 import { FaEnvelope, FaPhone, FaMapMarker } from 'react-icons/fa';
 import './Faqs.css';
 
@@ -24,7 +24,6 @@ const Faqs = () => {
       [name]: value,
     }));
 
-    // Validate the field and set validation error if necessary
     if (value.trim() === '') {
       setValidationErrors((prevErrors) => ({
         ...prevErrors,
@@ -33,7 +32,7 @@ const Faqs = () => {
     } else {
       setValidationErrors((prevErrors) => ({
         ...prevErrors,
-        [name]: '', // Clear validation error when field is not empty
+        [name]: '',
       }));
     }
   };
@@ -41,17 +40,16 @@ const Faqs = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Check if there are any validation errors before submitting the form
     const hasErrors = Object.values(validationErrors).some(error => error !== '');
     if (hasErrors) {
-      return; // Don't submit if there are validation errors
+      return;
     }
 
-    // Check if all fields are filled out
+
     const isFormFilled = Object.values(formData).every(value => value.trim() !== '');
     if (isFormFilled) {
       console.log(formData);
-      // Reset the form data
+
       setFormData({
         name: '',
         company: '',
@@ -62,7 +60,7 @@ const Faqs = () => {
         option: '',
       });
     } else {
-      // This case should not occur due to inline validation
+
       console.error('Form submission prevented because of validation errors.');
     }
   };
@@ -75,7 +73,7 @@ const Faqs = () => {
           <header className="text-white text-3xl font-bold py-4">
             <h1>FREQUENTLY ASKED </h1>
             <span className='text-gradient'>
-            <span className=''>QUESTIONS </span>
+              <span className=''>QUESTIONS </span>
             </span>
           </header>
           <section id="about" className="mb-8">
@@ -89,19 +87,19 @@ const Faqs = () => {
           </section>
         </div>
         <div>
-  {[1, 2, 3, 4, 5].map((index) => (
-    <div key={index} className="mb-4">
-      <select className="border-0 rounded-md p-2 pr-14 focus:outline-none text-white font-bold bg-transparent">
-        
-        <option value="">What is the program duration? {index}</option>
-        <option value="">How do I apply?</option>
-        <option value="">What support do you provide?</option>
-        <option value="">Do you take equity?</option>
-        <option value="">Can I apply with a team?</option>
-      </select>
-    </div>
-  ))}
-</div>
+          {[1, 2, 3, 4, 5].map((index) => (
+            <div key={index} className="mb-4">
+              <select className="border-0 rounded-md p-2 pr-14 focus:outline-none text-white font-bold bg-transparent">
+
+                <option value="">What is the program duration? {index}</option>
+                <option value="">How do I apply?</option>
+                <option value="">What support do you provide?</option>
+                <option value="">Do you take equity?</option>
+                <option value="">Can I apply with a team?</option>
+              </select>
+            </div>
+          ))}
+        </div>
 
 
 
@@ -157,7 +155,7 @@ const Faqs = () => {
 
 
 
-        {/* Image */}
+
         <div className="">
           <img
             src={icp7}
@@ -186,7 +184,7 @@ const Faqs = () => {
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-white ">
+                <label htmlFor="name" className="block  font-medium text-md  text-white ">
                   Your Name
                 </label>
                 <input
@@ -195,14 +193,14 @@ const Faqs = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="mt-1 p-2 w-full md:w-auto border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+                  className="mt-1 p-2 w-full  border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
                 />
-                {/* Display validation error message if any */}
+
                 {validationErrors.name && <p className="text-red-500 text-xs">{validationErrors.name}</p>}
               </div>
 
               <div>
-                <label htmlFor="company" className="block text-sm font-medium text-white ">
+                <label htmlFor="company" className="block text-md  font-medium text-white ">
                   Your Company
                 </label>
                 <input
@@ -211,15 +209,15 @@ const Faqs = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="mt-1 p-2 w-full md:w-auto border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+                  className="mt-1 p-2 w-full  border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
                 />
-                {/* Display validation error message if any */}
+
                 {validationErrors.name && <p className="text-red-500 text-xs">{validationErrors.name}</p>}
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-white ">
+                <label htmlFor="email" className="block text-md font-medium text-white ">
                   Email Address
                 </label>
                 <input
@@ -228,12 +226,12 @@ const Faqs = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="mt-1 p-2 w-full md:w-auto border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+                  className="mt-1 p-2 w-full  border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
                 />
                 {validationErrors.email_address && <p className="text-red-500 text-xs">{validationErrors.email_address}</p>}
               </div>
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-white ">
+                <label htmlFor="phone" className="block text-md font-medium text-white ">
                   Phone Number
                 </label>
                 <input
@@ -242,13 +240,13 @@ const Faqs = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="mt-1 p-2 w-full md:w-auto border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+                  className="mt-1 p-2 w-full  border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
                 />
                 {validationErrors.name && <p className="text-red-500 text-xs">{validationErrors.name}</p>}
               </div>
             </div>
             <div className="mt-4">
-              <label htmlFor="topic" className="block text-sm font-medium text-white ">
+              <label htmlFor="topic" className="block text-md font-medium text-white ">
                 Choose a Topic
               </label>
               <input
@@ -262,7 +260,7 @@ const Faqs = () => {
               {validationErrors.name && <p className="text-red-500 text-xs">{validationErrors.name}</p>}
             </div>
             <div className="mt-4">
-              <label className="block text-sm font-medium text-white">Which Best describes You ?</label>
+              <label className="block text-md font-medium text-white">Which Best describes You ?</label>
               <div className="mt-2 flex flex-col md:flex-row">
                 <div className="mr-8">
                   <input
@@ -315,7 +313,7 @@ const Faqs = () => {
 
             </div>
             <div className="mt-4">
-              <label htmlFor="message" className="block text-sm font-medium text-white">Message</label>
+              <label htmlFor="message" className="block text-md font-medium text-white">Message</label>
               <textarea
                 id="message"
                 name="message"
@@ -333,7 +331,7 @@ const Faqs = () => {
                 onChange={handleChange}
                 className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
               />
-              <label htmlFor="acceptConditions" className="ml-2 text-sm text-white">I accept all conditions</label>
+              <label htmlFor="acceptConditions" className="ml-2 text-md text-white">I accept all conditions</label>
             </div>
             <div className="flex justify-center mt-8">
               <button className="text-white py-2 px-10 text-xl rounded-full transition duration-300 bg-gradient-to-r from-pink-600 to-purple-700 font-bold">
